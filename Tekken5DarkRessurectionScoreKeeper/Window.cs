@@ -21,7 +21,8 @@ namespace Tekken5DarkRessurectionScoreKeeper
         private int charSelNumCols, charSelNumRows;
         private int charImgWidth, charImgHeight;
         private int charIndex, charSelectedCol, charSelectedRow;
-
+        private int[] row = new int[] { 40, -47, -136 };
+        private int[] col = new int[] { 450, 360, 270, 180, 90, -5, -95 , -185, -275, -365, -455, -545};        
         public Player LeftPlayer { set; get; }
         public Player RightPlayer { set; get; }
         Controller controller;
@@ -35,7 +36,7 @@ namespace Tekken5DarkRessurectionScoreKeeper
         {
             charSelectedCol = e.X/charImgWidth;
             charSelectedRow = e.Y/charImgHeight;
-            charIndex = charSelectedCol + charSelectedRow * charSelNumCols;
+            charIndex = charSelectedCol + charSelectedRow * charSelNumCols;            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -59,8 +60,7 @@ namespace Tekken5DarkRessurectionScoreKeeper
 
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
         {
-
-            if (Calc.isInRange(charSelectedCol, 0, 11) && Calc.isInRange(charSelectedRow, 0, 2) && (charSelectedCol != 0 || charSelectedRow != 0))
+            if (Calc.isInRange(charSelectedCol, 0, 11) && Calc.isInRange(charSelectedRow, 0, 2) && (charSelectedCol >= 0 || charSelectedRow >= 0))
             {
                 assignSelectedCharacter(e);
             }
@@ -74,7 +74,7 @@ namespace Tekken5DarkRessurectionScoreKeeper
             lblRightCharacter.Text = Character.getCharacterName(RightPlayer.SelectedCharacter);
 
             lblLeftPlayerName.Text  = LeftPlayer.Name;
-            lblRightPlayerName.Text = RightPlayer.Name;
+            lblRightPlayerName.Text = RightPlayer.Name;           
         }
 
         private void assignSelectedCharacter(MouseEventArgs e)
@@ -83,9 +83,15 @@ namespace Tekken5DarkRessurectionScoreKeeper
             {
                 case MouseButtons.Left:
                     setCharacterToPlayer(LeftPlayer, getClickedCharacter());
+                    pictureBoxLeft.Visible = true;
+                    pictureBoxLeft.Top = row[charSelectedRow];
+                    pictureBoxLeft.Left = col[charSelectedCol];
                     break;
-                case MouseButtons.Right:
+                case MouseButtons.Right:                   
                     setCharacterToPlayer(RightPlayer, getClickedCharacter());
+                    pictureBoxRight.Visible = true;
+                    pictureBoxRight.Top = row[charSelectedRow];
+                    pictureBoxRight.Left = col[charSelectedCol];
                     break;
             }
 

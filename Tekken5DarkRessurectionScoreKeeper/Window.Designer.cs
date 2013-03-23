@@ -36,38 +36,41 @@
             this.lblRightPlayerName = new System.Windows.Forms.Label();
             this.lblLeftPlayerName = new System.Windows.Forms.Label();
             this.panelLeft = new System.Windows.Forms.Panel();
+            this.pictureBoxLeft = new System.Windows.Forms.PictureBox();
             this.panelRight = new System.Windows.Forms.Panel();
+            this.pictureBoxRight = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tsmMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmNewGame = new System.Windows.Forms.ToolStripMenuItem();
+            this.panelMain = new System.Windows.Forms.Panel();
+            this.tcMain = new System.Windows.Forms.TabControl();
+            this.tpgFront = new System.Windows.Forms.TabPage();
             this.dBDataSetAll = new Tekken5DarkRessurectionScoreKeeper.DBDataSetAll();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.playerTableAdapter = new Tekken5DarkRessurectionScoreKeeper.DBDataSetAllTableAdapters.PlayerTableAdapter();
             this.dBDataSetAll1 = new Tekken5DarkRessurectionScoreKeeper.DBDataSetAll();
             this.sessionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sessionTableAdapter = new Tekken5DarkRessurectionScoreKeeper.DBDataSetAllTableAdapters.SessionTableAdapter();
-            this.panelMain = new System.Windows.Forms.Panel();
-            this.tsmNewGame = new System.Windows.Forms.ToolStripMenuItem();
-            this.tcMain = new System.Windows.Forms.TabControl();
-            this.tpgFront = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCharacterSelect)).BeginInit();
             this.panelLeft.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLeft)).BeginInit();
             this.panelRight.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRight)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            this.panelMain.SuspendLayout();
+            this.tcMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dBDataSetAll)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBDataSetAll1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sessionBindingSource)).BeginInit();
-            this.panelMain.SuspendLayout();
-            this.tcMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblLeftCharacter
             // 
-            this.lblLeftCharacter.AutoSize = true;
             this.lblLeftCharacter.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLeftCharacter.Location = new System.Drawing.Point(20, 0);
+            this.lblLeftCharacter.Location = new System.Drawing.Point(-1, -1);
             this.lblLeftCharacter.Name = "lblLeftCharacter";
-            this.lblLeftCharacter.Size = new System.Drawing.Size(326, 44);
+            this.lblLeftCharacter.Size = new System.Drawing.Size(544, 39);
             this.lblLeftCharacter.TabIndex = 2;
             this.lblLeftCharacter.Text = "Select a character";
             // 
@@ -84,54 +87,73 @@
             // 
             // lblRightCharacter
             // 
-            this.lblRightCharacter.AutoSize = true;
             this.lblRightCharacter.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRightCharacter.Location = new System.Drawing.Point(20, 0);
+            this.lblRightCharacter.Location = new System.Drawing.Point(-1, -1);
             this.lblRightCharacter.Name = "lblRightCharacter";
-            this.lblRightCharacter.Size = new System.Drawing.Size(326, 44);
+            this.lblRightCharacter.Size = new System.Drawing.Size(542, 44);
             this.lblRightCharacter.TabIndex = 4;
             this.lblRightCharacter.Text = "Select a character";
             // 
             // lblRightPlayerName
             // 
-            this.lblRightPlayerName.AutoSize = true;
             this.lblRightPlayerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 34F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRightPlayerName.Location = new System.Drawing.Point(40, 40);
+            this.lblRightPlayerName.Location = new System.Drawing.Point(-1, 43);
             this.lblRightPlayerName.Name = "lblRightPlayerName";
-            this.lblRightPlayerName.Size = new System.Drawing.Size(192, 53);
+            this.lblRightPlayerName.Size = new System.Drawing.Size(448, 84);
             this.lblRightPlayerName.TabIndex = 6;
             this.lblRightPlayerName.Text = "Player 2";
             // 
             // lblLeftPlayerName
             // 
-            this.lblLeftPlayerName.AutoSize = true;
             this.lblLeftPlayerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 34F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLeftPlayerName.Location = new System.Drawing.Point(40, 40);
+            this.lblLeftPlayerName.Location = new System.Drawing.Point(-1, 38);
             this.lblLeftPlayerName.Name = "lblLeftPlayerName";
-            this.lblLeftPlayerName.Size = new System.Drawing.Size(192, 53);
+            this.lblLeftPlayerName.Size = new System.Drawing.Size(450, 89);
             this.lblLeftPlayerName.TabIndex = 5;
             this.lblLeftPlayerName.Text = "Player 1";
             // 
             // panelLeft
             // 
             this.panelLeft.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelLeft.Controls.Add(this.lblLeftCharacter);
             this.panelLeft.Controls.Add(this.lblLeftPlayerName);
+            this.panelLeft.Controls.Add(this.lblLeftCharacter);
+            this.panelLeft.Controls.Add(this.pictureBoxLeft);
             this.panelLeft.Location = new System.Drawing.Point(0, 0);
             this.panelLeft.Name = "panelLeft";
             this.panelLeft.Size = new System.Drawing.Size(544, 129);
             this.panelLeft.TabIndex = 8;
             // 
+            // pictureBoxLeft
+            // 
+            this.pictureBoxLeft.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLeft.Image")));
+            this.pictureBoxLeft.Location = new System.Drawing.Point(451, 38);
+            this.pictureBoxLeft.Name = "pictureBoxLeft";
+            this.pictureBoxLeft.Size = new System.Drawing.Size(1086, 486);
+            this.pictureBoxLeft.TabIndex = 6;
+            this.pictureBoxLeft.TabStop = false;
+            this.pictureBoxLeft.Visible = false;
+            // 
             // panelRight
             // 
             this.panelRight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panelRight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelRight.Controls.Add(this.lblRightCharacter);
             this.panelRight.Controls.Add(this.lblRightPlayerName);
+            this.panelRight.Controls.Add(this.lblRightCharacter);
+            this.panelRight.Controls.Add(this.pictureBoxRight);
             this.panelRight.Location = new System.Drawing.Point(543, 0);
             this.panelRight.Name = "panelRight";
             this.panelRight.Size = new System.Drawing.Size(542, 129);
             this.panelRight.TabIndex = 9;
+            // 
+            // pictureBoxRight
+            // 
+            this.pictureBoxRight.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxRight.Image")));
+            this.pictureBoxRight.Location = new System.Drawing.Point(453, 40);
+            this.pictureBoxRight.Name = "pictureBoxRight";
+            this.pictureBoxRight.Size = new System.Drawing.Size(1085, 262);
+            this.pictureBoxRight.TabIndex = 7;
+            this.pictureBoxRight.TabStop = false;
+            this.pictureBoxRight.Visible = false;
             // 
             // menuStrip1
             // 
@@ -151,6 +173,41 @@
             this.tsmMenu.Size = new System.Drawing.Size(50, 20);
             this.tsmMenu.Text = "Menu";
             this.tsmMenu.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
+            // tsmNewGame
+            // 
+            this.tsmNewGame.Name = "tsmNewGame";
+            this.tsmNewGame.Size = new System.Drawing.Size(86, 20);
+            this.tsmNewGame.Text = "New Game...";
+            // 
+            // panelMain
+            // 
+            this.panelMain.Controls.Add(this.tcMain);
+            this.panelMain.Controls.Add(this.panelRight);
+            this.panelMain.Controls.Add(this.panelLeft);
+            this.panelMain.Location = new System.Drawing.Point(0, 267);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(1085, 388);
+            this.panelMain.TabIndex = 11;
+            // 
+            // tcMain
+            // 
+            this.tcMain.Controls.Add(this.tpgFront);
+            this.tcMain.Location = new System.Drawing.Point(0, 135);
+            this.tcMain.Name = "tcMain";
+            this.tcMain.SelectedIndex = 0;
+            this.tcMain.Size = new System.Drawing.Size(1085, 253);
+            this.tcMain.TabIndex = 10;
+            // 
+            // tpgFront
+            // 
+            this.tpgFront.Location = new System.Drawing.Point(4, 22);
+            this.tpgFront.Name = "tpgFront";
+            this.tpgFront.Padding = new System.Windows.Forms.Padding(3);
+            this.tpgFront.Size = new System.Drawing.Size(1077, 227);
+            this.tpgFront.TabIndex = 0;
+            this.tpgFront.Text = "tabPage1";
+            this.tpgFront.UseVisualStyleBackColor = true;
             // 
             // dBDataSetAll
             // 
@@ -180,41 +237,6 @@
             // 
             this.sessionTableAdapter.ClearBeforeFill = true;
             // 
-            // panelMain
-            // 
-            this.panelMain.Controls.Add(this.tcMain);
-            this.panelMain.Controls.Add(this.panelRight);
-            this.panelMain.Controls.Add(this.panelLeft);
-            this.panelMain.Location = new System.Drawing.Point(0, 267);
-            this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1085, 388);
-            this.panelMain.TabIndex = 11;
-            // 
-            // tsmNewGame
-            // 
-            this.tsmNewGame.Name = "tsmNewGame";
-            this.tsmNewGame.Size = new System.Drawing.Size(86, 20);
-            this.tsmNewGame.Text = "New Game...";
-            // 
-            // tcMain
-            // 
-            this.tcMain.Controls.Add(this.tpgFront);
-            this.tcMain.Location = new System.Drawing.Point(0, 135);
-            this.tcMain.Name = "tcMain";
-            this.tcMain.SelectedIndex = 0;
-            this.tcMain.Size = new System.Drawing.Size(1085, 253);
-            this.tcMain.TabIndex = 10;
-            // 
-            // tpgFront
-            // 
-            this.tpgFront.Location = new System.Drawing.Point(4, 22);
-            this.tpgFront.Name = "tpgFront";
-            this.tpgFront.Padding = new System.Windows.Forms.Padding(3);
-            this.tpgFront.Size = new System.Drawing.Size(1077, 227);
-            this.tpgFront.TabIndex = 0;
-            this.tpgFront.Text = "tabPage1";
-            this.tpgFront.UseVisualStyleBackColor = true;
-            // 
             // Window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -235,17 +257,17 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pbxCharacterSelect)).EndInit();
             this.panelLeft.ResumeLayout(false);
-            this.panelLeft.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLeft)).EndInit();
             this.panelRight.ResumeLayout(false);
-            this.panelRight.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRight)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.panelMain.ResumeLayout(false);
+            this.tcMain.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dBDataSetAll)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBDataSetAll1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sessionBindingSource)).EndInit();
-            this.panelMain.ResumeLayout(false);
-            this.tcMain.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -273,6 +295,8 @@
         private System.Windows.Forms.ToolStripMenuItem tsmNewGame;
         public System.Windows.Forms.TabPage tpgFront;
         public System.Windows.Forms.TabControl tcMain;
+        private System.Windows.Forms.PictureBox pictureBoxLeft;
+        private System.Windows.Forms.PictureBox pictureBoxRight;
     }
 }
 
